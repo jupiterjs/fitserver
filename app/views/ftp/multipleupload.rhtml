@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<head>
+<title>FTP IT - Online FTP Client</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/ftp/ftp.css" />
+
+<!--[if IE]>
+<style>
+#multiple {margin: 0px;}
+#cancel_upload {height: 17px;}
+</style>
+<![endif]-->
+</head>
+<body id='multiple' style=''>
+
+	<h3>Upload into <span id='upload_form_folder_name'></span></h3>
+	<form enctype="multipart/form-data" id="upload_form" method="post" action="/upload">
+				<p>1. Click <input type="file" id="photoupload-filedata-1" name="Filedata"/> and select files.</p>
+				<ul id="photoupload-queue" class="photoupload-queue">
+							
+				</ul>
+				<p>2. Click <input type="submit" value="Start Upload" id="profile-submit" class="submit"/>.</p>
+				<span id='clear_completed'></span>
+	</form>
+		
+
+	<a id='cancel_upload' href='#' onclick="window.parent.close_upload()">Close upload window</a>
+	
+	<script language="javascript" type="text/javascript" src="/jmvc/include.js"></script>
+<script language="javascript" type="text/javascript">
+	include.setup('development')
+    include.plugins('class','helpers','event')
+	include(	
+				"/resources/Swiff.Base.js",
+				"/resources/Swiff.Uploader.js",
+				"/resources/FancyUpload.js"
+				);
+</script>
+<script language="javascript" type="text/javascript">
+(function(){
+	var path = '';
+	var started = false;
+	var completef = function(name){
+		parent.FileView.insert( (path != '/' ? path+ '/' : '') +name);
+	};
+	
+	start =  function(p){
+		setTimeout(function(){
+			path = p
+			
+			if(started) {
+				uplooad.options.url = '/upload?_ftp_session_id='+ readCookie('_ftp_session_id')+'&path='+p
+				return;
+			}
+			var input = MVC.$E('photoupload-filedata-1');
+			uplooad = new FancyUpload(input, {
+				swf: '/swf/Swiff.Uploader.swf',
+				queueList: 'photoupload-queue',
+				container: MVC.$E('h1'),
+				types: {'All Files (*.*)': '*.*'},
+				onComplete: completef
+			});
+			uplooad.options.url = '/upload?_ftp_session_id='+ readCookie('_ftp_session_id')+'&path='+p;
+			started = true;
+		}, 20)
+	}
+	get_path = function(){
+		return path;
+	}
+})()
+	
+
+	
+	
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+
+	
+</script>
+	
+</body>
+</html>

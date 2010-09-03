@@ -1,0 +1,14 @@
+#Example:
+#ruby script/compress_js.rb --file 'public\javascripts\JITS\JITS_Object.js'
+#ruby script/compress_js.rb --folder 'public\JsJ'
+require 'getoptlong'
+
+
+require 'lib/jits_file_helper.rb'
+
+
+FileUtils.cp_r File.join('..','jmvc_2_0','jmvc','.'), 
+                      File.join('public','jmvc')
+                      
+clean_versioning(File.join('public','jmvc'))
+clean_project(File.join('public','jmvc'))

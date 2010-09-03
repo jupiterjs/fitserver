@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>F->IT - web based FTP client</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/ftp/style.css" />
+<script src="/swf/standard.js" type="text/javascript"></script>
+<!--[if IE]>
+	<style>
+	#template_caption {
+		left: 22px;
+	}
+	#result_caption {
+		bottom: -15px;
+	}
+	#template_container {
+		margin: 20px 0px;
+	}
+	#result_caption {
+		position: relative;
+	}
+	ul {margin-left: 60px;}
+	
+	</style>
+	<![endif]-->
+	<!--[if IE 6]>
+		<style>#option_links {position:relative; top: 15px;}
+			.width {width:960px;}
+			.left_column {width: 470px;}
+		</style>
+	<![endif]-->
+
+</head>
+<body>
+<div id='header'>
+	<div class='width'>
+		<a href='http://jupiterit.com'><img src='/images/jupiter.png' style='border:none'/></a>
+		<ul>
+			<li><a href='/'>Home</a></li>
+			<li><a href='http://f-it.googlecode.com/files/f-it.zip'>Download</a></li>
+			<li><a href='http://code.google.com/p/f-it/'>GoogleCode</a></li>
+			<li><a href='http://code.google.com/p/embeddedjavascript/w/list'>Documentation</a></li>
+			<li><a href='http://groups.google.com/group/f-it'>Forum</a></li>
+			<li><a href='http://jupiterit.com/contact.html'>Contact</a></li>
+		</ul>
+	</div>
+</div>
+<div id='title' class='grey_banner'>
+	<div class='width'>
+			<div id='title_section'>
+
+				<label>
+					
+					 A FREE, open-source, online,
+					<br/>
+					 FTP client. 
+				</label>
+			</div>
+			
+			
+			<h1><img src='/images/fit.png'/></h1>
+			<h2>FTP client <span style='color: Gray; font-size:8pt;'>(Beta)</span></h2>
+	</div>
+</div>
+<div class='width'>
+		<div class='right_column'>
+			<h3>FTP Login.</h3>
+				<%=form_tag( { :action => 'connect'}, {:id => 'login'} )%>
+					<table style="margin-left: 40px;">
+						<tbody>
+							<tr>
+								<td style='width: 100px;'>FTP server</td>
+								<td style='width: 315px;'>
+								    
+                                    
+                                    <input name='url' value='' id='url' style="font-size: 14pt;padding: 2px;float:left; display: block" tabindex="1"/>
+									<div style='float:left; display: block;height: 24px;padding: 8px 5px 2px;'>Port</div>
+                                    <input name='port' value='21' id='port' style="font-size: 14pt;padding: 2px; width: 20px;float:left; display: block" tabindex="4"/>
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td style='padding-top: 0px;text-align: top;font-size: 9px;color: gray;' id='examples'>
+                                    Examples: my.ftp.com, 76.92.56.2
+								</td>
+							</tr>
+							<tr>
+								<td>Username</td>
+								<td><input name='username' id='username' value=''  style="font-size: 14pt;padding: 2px;" tabindex="2"/></td>
+							</tr>
+							<tr>
+								<td>Password</td><td><input type='password' name='password' id='password' value=''  style="font-size: 14pt;padding: 2px;" tabindex="3"/></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td></td>
+                                <td><span style='float:right; margin-top: 3px; margin-right: 3px'>
+                                    Remember me? <input type='checkbox' value='yes' id='remember' name='remember' style='font-size: 12pt;'/>
+                                </span>
+                                    <input type='submit' value='Connect' style='font-size: 12pt;'/>
+                                    
+                                
+                                </td>
+							</tr>
+						</tfoot>
+					</table>
+                </form>
+				
+				
+		</div>
+		<div class='left_column'>
+			<h3>About.</h3>
+			<p>F->IT is an F-ing easy to use FTP client that resembles Windows Explorer.
+			With it, you can:
+			</p>
+			<ul>
+				<li>Drag and drop folders and files.</li>
+				<li>Edit highlighted source files.</li>
+				<li>Upload multiple files.</li>
+			</ul>
+			
+			<br/>
+			<div style='margin-left: 40px;'>
+				<a href='http://javascriptmvc.com'><img src='/images/javascriptmvc.png' style='border:none' /></a>
+				<p style='margin: 3px 0px 0px 0px'>F->IT was built with <a href='http://javascriptmvc.com'>JavaScriptMVC</a>.</p>
+			</div>
+		</div>
+		<div class='clear'></div>
+</div>
+<div id='try_it' class='grey_banner'>
+	<div class='width'>
+	Check it out.
+	</div>
+</div>
+<div class='width'>
+	<br/>
+	<center>
+<script type="text/javascript">
+<!--
+writeDocument('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="800" height="631" ID="Captivate1">'+
+  '<param name="movie" value="/swf/FIT_skin.swf">'+
+  '<param name="quality" value="high">'+
+  '<param name="loop" value="1">'+
+  '<embed src="/swf/FIT_skin.swf" width="800" height="631" loop="1" quality="high" pluginspage="https://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" menu="false"></embed>'+
+  '</object>');
+//-->
+</script>
+
+<script type="text/javascript">
+
+</script>
+
+<noscript>
+	<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="https://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="800" height="631" ID="Captivate1">
+		<param name="movie" value="/swf/FIT_skin.swf">
+		<param name="quality" value="high">
+		<param name="loop" value="1">
+		<embed src="/swf/FIT_skin.swf" width="800" height="631" loop="1" quality="high" pluginspage="https://www.adobe.com/go/getflashplayer" type="application/x-shockwave-flash" menu="false"></embed>
+	</object>
+</noscript>
+</center>
+</div>
+<div id='try_it' class='grey_banner'>
+	<div class='width'>
+	How it was made.
+	</div>
+</div>
+<div class='width'>
+	<p>F->IT was made with <a href='http://javascriptmvc.com'>JavaScriptMVC</a> using the
+	following plugins:</p>
+	<ul>
+		<li>Include</li>
+		<li>Controller</li>
+		<li>View</li>
+		<li>Error</li>
+		<li>Ajax</li>
+	</ul>
+	<br/>
+</div>
+<div id='footer'>
+	<div class='width'>
+		<a href='http://jupiterit.com'><img src='/images/jupiter.png' style='border:none'/></a>
+		<ul>
+			<li><a href='/'>Home</a></li>
+			<li><a href='http://embeddedjavascript.googlecode.com/files/ejs_production.js'>Download</a></li>
+			<li><a href='http://code.google.com/p/embeddedjavascript/'>GoogleCode</a></li>
+			<li><a href='http://code.google.com/p/embeddedjavascript/w/list'>Documentation</a></li>
+			<li><a href='http://groups.google.com/group/embeddedjavascript'>Forum</a></li>
+			<li><a href='http://jupiterit.com/contact.html'>Contact</a></li>
+		</ul>
+	</div>
+</div>
+<script src='/jmvc/include.js?home,development' type='text/javascript'></script>
+<script src="https://ssl.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2302003-6";
+urchinTracker();
+</script>
+</body>
+</html>

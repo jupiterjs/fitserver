@@ -1,0 +1,105 @@
+body {
+	background:#FFFFFF none repeat scroll 0%;
+	margin:0pt;
+	min-width:610px;
+	padding:0pt;
+	font-family: Verdana;
+}
+
+#media {
+	text-align: center;
+	margin: 0pt auto;
+}
+
+#header, #footer {
+	background:#33415D url(/fit/images/title.png) repeat-x scroll center top;
+	border-bottom:1px solid #A1A6B1; height:40px;
+	position:relative;
+	z-index:1;
+}
+
+.width {
+	position:relative;
+	margin:0pt auto;
+	max-width:960px;
+}
+
+#header ul, #footer ul {
+	background:#33415D url(/fit/images/title.png) repeat-x scroll center top;
+	list-style-image:none;list-style-position:outside;list-style-type:none;
+	margin:0pt;padding:0pt;
+	position:absolute;top:0pt;right:20px;
+}
+
+#header li, #footer li {
+float:left;
+display: block;
+margin:0pt;
+padding:0pt;
+}
+
+#header ul a, #footer ul a {
+	border-left:1px solid #0c1a34;
+	border-right:1px solid #254f9b;
+	padding:12px 5px 9pt;
+	height:16px;
+	color: white;
+	display: block;
+	float: left;
+	font-family: verdana;
+	text-decoration:none;
+	font-size: 10pt;
+	
+}
+#header a:hover, #footer a:hover {text-decoration:underline;}
+
+.grey_banner {
+	border-top: solid 1px #C3D9FF; 
+	border-bottom: solid 1px #C3D9FF;
+	background: rgb(224,236,255); margin-top: 40px;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+#title {margin-top: 20px;margin-bottom: 40px;}
+
+#title_section {
+	float: right; 
+	padding: 5px 42px 5px 0px; 
+	font-size: 23px; 
+	width: 400px;
+	position: relative;
+}
+
+#title_section label{ text-align: center; display: block; }
+
+h3, label {font-size: 23px; font-weight: normal;}
+h3 {margin:0px 0px 7px 40px; padding:0px; line-height: 20px; padding-top: 5px;}
+p {font-size: 11pt; margin: 0px 40px 0px 40px; padding:0px;}
+
+
+h1 {
+	margin:0px 0px 0px 40px; padding:0px;
+	font-size: 60px;
+	font-weight: 900; 
+	letter-spacing: 1px; 
+	line-height: 60px;}
+	h1.normal {letter-spacing: 0px;}
+	
+h2 {margin:0px; margin-left: 40px;padding:0px; font-size: 8pt;font-weight: normal;}
+
+.right_column {float: right; width: 480px;}
+.right_column div img{margin-left: 40px; }
+.right_column a img, .right_column div img { border: none }
+.left_column {width: 480px; }
+.error {color: red;}
+
+#try_it div, #get_it div {text-align: center;font-size: 40px;margin-top: 15px;}
+
+ul {margin-left: 20px; margin-top: 10px;}
+
+tbody input {width: 230px;}
+
+#examples a {text-decoration: none; color: #6f6f90}
+#examples a:hover {text-decoration: underline; color: blue}
+
