@@ -1,0 +1,7 @@
+config/app_config.rb
+config/database.yml
+config/deploy.rb.local
+config/deploy.rb
+config/ftp_mongrel_cluster.yml
+tmp/*
+log/*
